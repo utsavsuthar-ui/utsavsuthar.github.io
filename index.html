@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Job Application - Utsav Suthar</title>
+<style>
+:root{--bg1:#0f172a;--bg2:#0ea5a5;--card:rgba(255,255,255,.06);--accent:#60a5fa;color-scheme:dark;
+font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+body{margin:0;height:100%;display:flex;align-items:center;justify-content:center;padding:32px;
+background:linear-gradient(135deg,var(--bg1),#072b3b,var(--bg2));background-attachment:fixed;
+color:#e6eef7;line-height:1.45;}
+.container{width:min(980px,96vw);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,.6);overflow:hidden;backdrop-filter:blur(6px)saturate(120%);}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.04);}
+.logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#34d399);
+display:flex;align-items:center;justify-content:center;font-weight:700;color:#052;box-shadow:0 6px 18px rgba(2,6,23,.5);}
+nav{display:flex;gap:10px;}nav a{color:rgba(230,238,247,.9);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;font-size:14px;}
+nav a:hover,nav a.active{background:rgba(255,255,255,.04);color:#fff;}
+main{display:grid;grid-template-columns:1fr 320px;gap:20px;padding:20px;}@media(max-width:880px){main{grid-template-columns:1fr;}}
+.card{background:var(--card);padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,.03);}
+.hero{display:flex;gap:16px;align-items:center;}
+.avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,#60a5fa,#34d399);
+display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#022;box-shadow:0 8px 30px rgba(2,6,23,.5);}
+h1{margin:0;font-size:20px;}p.lead{margin:6px 0 0;color:rgba(230,238,247,.85);}
+.skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
+.chip{background:rgba(255,255,255,.03);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px;border:1px solid rgba(255,255,255,.02);}
+aside{display:flex;flex-direction:column;gap:12px;}
+.btn{display:inline-block;padding:10px 14px;background:linear-gradient(90deg,#7dd3fc,#60a5fa);color:#022;
+font-weight:700;border-radius:8px;text-decoration:none;}
+.small{font-size:13px;color:rgba(230,238,247,.8);}
+footer{padding:12px 22px;font-size:13px;color:rgba(230,238,247,.7);border-top:1px solid rgba(255,255,255,.02);
+display:flex;justify-content:space-between;}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<div style="display:flex;gap:12px;align-items:center">
+<div class="logo">US</div>
+<div><div style="font-weight:800">Utsav Suthar</div><div class="small" style="opacity:.7">Frontend Developer · Job Application</div></div>
+</div>
+<nav><a href="#home" class="active">Home</a><a href="#info">Info</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav>
+</header>
+<main>
+<section id="home" class="card">
+<div class="hero">
+<div class="avatar">US</div>
+<div><h1>Hi — I'm Utsav</h1>
+<p class="lead">I build clean, accessible interfaces and love turning designs into reliable products.</p>
+<div class="skills"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span><span class="chip">React</span></div>
+</div></div>
+<h2 style="font-size:16px;margin:14px 0 6px">Short Introduction</h2>
+<p class="small">I am a dedicated student at Worth County High School with a 4.0 GPA, showcasing my commitment to academic excellence. Passionate about computer science and math, I have developed projects like a Soccer Stats Tracker App and an interactive soccer game, demonstrating my problem-solving, programming, and teamwork skills.
+</p>
+</section>
+<aside>
+<div class="card" id="resume">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <strong>Resume</strong>
+    <a class="btn" href="https://docs.google.com/document/d/1ZS9S7pGb6dLwah8b26-L8AoVK60ZcgPr5CumiZLNC5U/edit?tab=t.0#heading=h.ky7p3jymzhov" target="_blank" rel="noopener noreferrer">Download</a>
+  </div>
+  <div class="small">3+ yrs UI • Accessibility • Responsive • Maintainable code</div>
+</div>
+<div class="card" id="info"><strong>Information</strong>
+<div class="small">Location: Sylvester, GA<br>Availability: Immediate<br>Preferred: Programming / Soccer</div>
+</div>
+<div class="card" id="contact"><strong>Contact</strong>
+<div class="small">Email: <a href="mailto:utsav@example.com">utsav@example.com</a><br>
+Phone: <a href="tel:+12292065724">+1 229 206 5724</a><br>
+Address: Dewberry Dr, Sylvester, GA</div>
+</div>
+</aside>
+</main>
+<footer><div class="small">© Utsav Suthar</div><div>Built with HTML & CSS</div></footer>
+</div>
+<script>
+document.querySelectorAll('nav a').forEach(a=>{
+a.onclick=e=>{
+document.querySelectorAll('nav a').forEach(x=>x.classList.remove('active'));
+a.classList.add('active');
+e.preventDefault();
+document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+};
+});
+</script>
+</body>
+</html>
